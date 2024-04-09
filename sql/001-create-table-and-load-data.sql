@@ -12,4 +12,3 @@ INSERT INTO names (name,age,job) VALUES ('Cisco', 32,'IT');
 INSERT INTO names (name,age,job) VALUES ('Minori', 25,'sales');
 INSERT INTO names (name,age,job) VALUES ('Tarou', 20,'student');
 INSERT INTO names (name,age,job) VALUES ('Kazunori',62,'architect');
-
