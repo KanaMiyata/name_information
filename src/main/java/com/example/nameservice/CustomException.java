@@ -10,17 +10,18 @@ import java.time.ZonedDateTime;
 import java.util.Map;
 
 @RestControllerAdvice
-public class CustomException{
-    @ExceptionHandler(value =NameNotFoundException.class)
+public class CustomException {
+    @ExceptionHandler(value = NameNotFoundException.class)
 
     public ResponseEntity<Map<String, String>> handleUserNotFoundException(
-        NameNotFoundException e, HttpServletRequest request) {
-    Map<String, String> body = Map.of(
-            "timestamp", ZonedDateTime.now().toString(),
-            "status", String.valueOf(HttpStatus.NOT_FOUND.value()),
-            "error", HttpStatus.NOT_FOUND.getReasonPhrase(),
-            "message", e.getMessage(),
-            "path", request.getRequestURI());
-    return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+            NameNotFoundException e, HttpServletRequest request) {
+        Map<String, String> body = Map.of(
+                "timestamp", ZonedDateTime.now().toString(),
+                "status", String.valueOf(HttpStatus.NOT_FOUND.value()),
+                "error", HttpStatus.NOT_FOUND.getReasonPhrase(),
+                "message", e.getMessage(),
+                "path", request.getRequestURI());
+        return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+    }
 }
-}
+

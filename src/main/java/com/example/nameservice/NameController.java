@@ -20,7 +20,6 @@ public class NameController {
     public Name getName(@PathVariable("id") int id) {
         return nameService.findName(id);
     }
-
 }
 
 

@@ -5,3 +5,4 @@ public class NameNotFoundException extends RuntimeException {
         super(message);
     }
 }
+
